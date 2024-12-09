@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function fetchData(userId) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          let success = true; // Simulating a successful response
+          if (success) {
+            resolve({ userId: userId, name: 'John Doe' });
+          } else {
+            reject("Failed to fetch data");
+          }
+        }, 1000);
+      });
+    }
+
+    fetchData(1)
+      .then(data => {
+        console.log("User Data:", data);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  </script>
+
+</body>
+
+</html>
