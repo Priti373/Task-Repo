@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function getDayName(dayNumber) {
+      let dayName;
+
+      switch (dayNumber) {
+        case 1:
+          dayName = 'Monday';
+          break;
+        case 2:
+          dayName = 'Tuesday';
+          break;
+        case 3:
+          dayName = 'Wednesday';
+          break;
+        case 4:
+          dayName = 'Thursday';
+          break;
+        case 5:
+          dayName = 'Friday';
+          break;
+        case 6:
+          dayName = 'Saturday';
+          break;
+        case 7:
+          dayName = 'Sunday';
+          break;
+        default:
+          dayName = 'Invalid day number';
+      }
+
+      return dayName;
+    }
+
+    // Example calls
+    console.log(getDayName(1)); // Outputs: Monday
+    console.log(getDayName(5)); // Outputs: Friday
+    console.log(getDayName(8)); // Outputs: Invalid day number
+
+  </script>
+</body>
+
+</html>
