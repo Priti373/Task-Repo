@@ -9,21 +9,35 @@
 
 <body>
   <script>
+    // Define an async function named fetchUserData that takes a userId parameter
     async function fetchUserData(userId) {
       try {
+        // Await the response of a fetch request to the given URL with the userId parameter
         let response = await fetch(`https://api.example.com/users/${userId}`);
+
+        // Check if the response status is not OK (status code not in the range 200-299)
         if (!response.ok) {
+          // If the response is not OK, throw an error
           throw new Error('Network response was not ok');
         }
+
+        // Await the conversion of the response to JSON format
         let data = await response.json();
+
+        // Log the user data to the console
         console.log("User data:", data);
+
       } catch (error) {
+        // If an error occurs at any point in the try block, log the error message
         console.error("Failed to fetch user data:", error);
       }
     }
 
-    fetchUserData(1);
+
   </script>
+  // async-makes a function return a promise
+  //makes an async function wait for a promise.
+  //async/await makes the asynchronous code write in a synchronous manner
 
 </body>
 
